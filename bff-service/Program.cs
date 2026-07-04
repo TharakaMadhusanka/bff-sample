@@ -46,9 +46,9 @@ builder.Services.AddAuthentication(options =>
 // Enable OpenID Connect Authentication to authenticate users with an external identity provider.
 .AddOpenIdConnect(options =>
 {
-    options.Authority = "http://127.0.0.1:8080/realms/finpilot/"; // The URL of the identity provider
-    options.ClientId = "finpilot-bff"; // The client ID registered with the identity provider
-    options.ClientSecret = "HgoRlsRvORUGlYDLYDis89m64mzrVpW9"; // The client secret registered with the identity provider
+    options.Authority = "<Your Keycloak Realm URL>"; // The URL of the identity provider
+    options.ClientId = "<Your Client ID>"; // The client ID registered with the identity provider
+    options.ClientSecret = "<Your Client Secret>"; // The client secret registered with the identity provider
     options.ResponseType = "code"; // Use the authorization code flow
     options.SaveTokens = true; // Save the tokens in the authentication properties for later use
     options.GetClaimsFromUserInfoEndpoint = true; // Get additional claims from the user info endpoint
